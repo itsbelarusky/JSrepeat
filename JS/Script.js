@@ -45,7 +45,37 @@ const arr = ["arrow.png", 10, {}, [], "Sara", "apple.jpg"];
 // incr++;
 // decr--;
 // console.log(decr)
- const isChecked = false;
- const isClose = false;
+//  const isChecked = false;
+//  const isClose = false;
+//
+//  console.log(isChecked || isClose);
 
- console.log(isChecked || isClose);
+//--------------Домашка1------------------
+
+const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', '');
+console.log(numberOfFilms);
+
+
+
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
+const a = prompt('Один из последних просмотренных фильмов?', "");
+const b = prompt('На сколько оцените его?', "");
+const c = prompt('Один из последних просмотренных фильмов?', "");
+const d = prompt('На сколько оцените его?', "");
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
+
+
+console.log(personalMovieDB)
+
+
+
+
+
+//--------------Задание3------------------
