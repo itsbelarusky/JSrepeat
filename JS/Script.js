@@ -106,7 +106,7 @@ switch (num) {
         console.log("Не в этот раз!");
         break;
 }
-
+ const num3 = 10;
 
 
 
