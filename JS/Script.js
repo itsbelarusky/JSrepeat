@@ -91,21 +91,31 @@
 //
 // (num === 100) ? console.log("Good") : console.log("Bad")
 
-const num = 10;
-switch (num) {
-    case 40:
-        console.log("Ошибка");
-        break;
-    case 10:
-        console.log("В точку!!!");
-        break;
-    case 13:
-        console.log("Ошибка");
-        break;
-    default:
-        console.log("Не в этот раз!");
-        break;
-}
+// const num = 10;
+// switch (num) {
+//     case 40:
+//         console.log("Ошибка");
+//         break;
+//     case 10:
+//         console.log("В точку!!!");
+//         break;
+//     case 13:
+//         console.log("Ошибка");
+//         break;
+//     default:
+//         console.log("Не в этот раз!");
+//         break;
+// }
+
+let num = 50;
+// while (num <= 55) {
+//     console.log(num)
+//     num++
+// }
+do {
+    console.log(num)
+    num++
+} while (num < 55)
 
 
 
