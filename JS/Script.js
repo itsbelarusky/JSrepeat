@@ -52,27 +52,7 @@
 
 //--------------Домашка1------------------
 
-// const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', '');
-// console.log(numberOfFilms);
-//
-//
-//
-// const personalMovieDB = {
-//     count: numberOfFilms,
-//     movies: {},
-//     actors: {},
-//     genres: [],
-//     privat: false
-// };
-// const a = prompt('Один из последних просмотренных фильмов?', "");
-// const b = prompt('На сколько оцените его?', "");
-// const c = prompt('Один из последних просмотренных фильмов?', "");
-// const d = prompt('На сколько оцените его?', "");
-// personalMovieDB.movies[a] = b;
-// personalMovieDB.movies[c] = d;
-//
-//
-// console.log(personalMovieDB)
+
 //
 // if (6 === 5) {
 //     console.log("Its true")
@@ -91,7 +71,6 @@
 //
 // (num === 100) ? console.log("Good") : console.log("Bad")
 
-<<<<<<< HEAD
 // const num = 10;
 // switch (num) {
 //     case 40:
@@ -108,16 +87,63 @@
 //         break;
 // }
 
-let num = 50;
+
 // while (num <= 55) {
 //     console.log(num)
 //     num++
 // }
-do {
-    console.log(num)
-    num++
-} while (num < 55) {
+// do {
+//     console.log(num)
+//     num++
+// } while (num < 55) {
+//     console.log("Hello")
+// }
 
+// let num = 50;
+//
+// let num = 30;
+// for (let i = 1; i < 8; i++){
+//     num++
+//     console.log(num);
+// }
+// let num = 20;
+// for (let i = 1; i < 10; i++) {
+//     if (i === 5){
+//         continue;
+//
+//     }
+//     console.log(i)
+// }
+
+const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', '');
+console.log(numberOfFilms);
+
+
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
+
+for (let i = 0; i < 2; i++) {
+    const a = prompt('Один из последних просмотренных фильмов?', "");
+    const b = prompt('На сколько оцените его?', "");
+    if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+        personalMovieDB.movies[a] = b;
+    } else {
+        i--;
+    }
 }
 
-
+if (personalMovieDB.count < 10) {
+    console.log("Просмотрено слишком мало фильмов");
+} else if (personalMovieDB.count <= 10 && personalMovieDB.count < 30) {
+    console.log("Вы любитель фильмов");
+} else if (personalMovieDB.count > 30) {
+    console.log("КИНОМАН!!!")
+} else {
+    console.log("ОШИБКА")
+}
+console.log(personalMovieDB)
