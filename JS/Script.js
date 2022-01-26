@@ -91,6 +91,7 @@
 //
 // (num === 100) ? console.log("Good") : console.log("Bad")
 
+<<<<<<< HEAD
 // const num = 10;
 // switch (num) {
 //     case 40:
@@ -115,8 +116,8 @@ let num = 50;
 do {
     console.log(num)
     num++
-} while (num < 55)
+} while (num < 55) {
 
-
+}
 
 
