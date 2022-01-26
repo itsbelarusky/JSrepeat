@@ -127,6 +127,7 @@ const personalMovieDB = {
     privat: false
 };
 
+
 for (let i = 0; i < 2; i++) {
     const a = prompt('Один из последних просмотренных фильмов?', "");
     const b = prompt('На сколько оцените его?', "");
@@ -136,6 +137,7 @@ for (let i = 0; i < 2; i++) {
         i--;
     }
 }
+
 
 if (personalMovieDB.count < 10) {
     console.log("Просмотрено слишком мало фильмов");
