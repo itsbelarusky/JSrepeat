@@ -115,9 +115,17 @@
 //     console.log(i)
 // }
 
-const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', '');
-console.log(numberOfFilms);
+let numberOfFilms;
 
+
+function start() {
+    numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', '');
+    while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+        numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', '');
+    }
+}
+
+start();
 
 const personalMovieDB = {
     count: numberOfFilms,
@@ -128,24 +136,87 @@ const personalMovieDB = {
 };
 
 
-for (let i = 0; i < 2; i++) {
-    const a = prompt('Один из последних просмотренных фильмов?', "");
-    const b = prompt('На сколько оцените его?', "");
-    if (a != null && b != null && a != '' && b != '' && a.length < 50) {
-        personalMovieDB.movies[a] = b;
-    } else {
-        i--;
+function rememberMyFilms() {
+    for (let i = 0; i < 2; i++) {
+        const a = prompt('Один из последних просмотренных фильмов?', "");
+        const b = prompt('На сколько оцените его?', "");
+        if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+            personalMovieDB.movies[a] = b;
+        } else {
+            i--;
+        }
     }
 }
 
+rememberMyFilms();
 
-if (personalMovieDB.count < 10) {
-    console.log("Просмотрено слишком мало фильмов");
-} else if (personalMovieDB.count <= 10 && personalMovieDB.count < 30) {
-    console.log("Вы любитель фильмов");
-} else if (personalMovieDB.count > 30) {
-    console.log("КИНОМАН!!!")
-} else {
-    console.log("ОШИБКА")
+
+function detectedMyLevel() {
+    if (personalMovieDB.count < 10) {
+        console.log("Просмотрено слишком мало фильмов");
+    } else if (personalMovieDB.count <= 10 && personalMovieDB.count < 30) {
+        console.log("Вы любитель фильмов");
+    } else if (personalMovieDB.count > 30) {
+        console.log("КИНОМАН!!!")
+    } else {
+        console.log("ОШИБКА")
+    }
+
 }
-console.log(personalMovieDB)
+
+detectedMyLevel();
+
+function showMyDB() {
+    if (personalMovieDB.privat === false) {
+        console.log(personalMovieDB)
+    }
+}
+
+showMyDB();
+
+function writeYourGenres() {
+    for (let i = 1; i <= 3; i++) {
+        const genre = prompt(`Ваш любимый жанр под номером ${i}`)
+        personalMovieDB.genres[i - 1] = genre;
+    }
+}
+writeYourGenres()
+
+// function showFirstMessage(text) {
+//     console.log(text)
+// }
+//
+// showFirstMessage("Hello react guru");
+//
+// function calc(a, b) {
+//     return (a + b);
+//
+// }
+//
+// console.log(calc(4, 5))
+// console.log(calc(10, 5))
+// console.log(calc(20, 5))
+//
+//
+// const logger = function () {
+//     console.log("HELLOLOLOLOL")
+// };
+// logger()
+//
+//
+// const arrowFunc = (a, b) => {
+//     console.log(a - b)
+//
+// }
+// arrowFunc(10, 10)
+//
+//
+// const str = "arrow"
+// console.log(str.length)
+//
+// const logg = "Hello world"
+// console.log(logg.slice(6, 11))
+//
+// const logg2 = "Hello world"
+// console.log(logg2.substr(0, 7))
+
