@@ -180,6 +180,7 @@ function writeYourGenres() {
         personalMovieDB.genres[i - 1] = genre;
     }
 }
+
 writeYourGenres()
 
 // function showFirstMessage(text) {
@@ -219,4 +220,17 @@ writeYourGenres()
 //
 // const logg2 = "Hello world"
 // console.log(logg2.substr(0, 7))
+
+//================Callback==================
+
+function learnJS(lang, callback) {
+    console.log(`I learm: ${lang}`);
+    callback();
+}
+
+function done() {
+ console.log("A confirm all knowledge");
+}
+
+learnJS("Javascript", done);
 
