@@ -114,74 +114,74 @@
 //     }
 //     console.log(i)
 // }
-
-let numberOfFilms;
-
-
-function start() {
-    numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', '');
-    while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
-        numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', '');
-    }
-}
-
-start();
-
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-};
-
-
-function rememberMyFilms() {
-    for (let i = 0; i < 2; i++) {
-        const a = prompt('Один из последних просмотренных фильмов?', "");
-        const b = prompt('На сколько оцените его?', "");
-        if (a != null && b != null && a != '' && b != '' && a.length < 50) {
-            personalMovieDB.movies[a] = b;
-        } else {
-            i--;
-        }
-    }
-}
-
-rememberMyFilms();
-
-
-function detectedMyLevel() {
-    if (personalMovieDB.count < 10) {
-        console.log("Просмотрено слишком мало фильмов");
-    } else if (personalMovieDB.count <= 10 && personalMovieDB.count < 30) {
-        console.log("Вы любитель фильмов");
-    } else if (personalMovieDB.count > 30) {
-        console.log("КИНОМАН!!!")
-    } else {
-        console.log("ОШИБКА")
-    }
-
-}
-
-detectedMyLevel();
-
-function showMyDB() {
-    if (personalMovieDB.privat === false) {
-        console.log(personalMovieDB)
-    }
-}
-
-showMyDB();
-
-function writeYourGenres() {
-    for (let i = 1; i <= 3; i++) {
-        const genre = prompt(`Ваш любимый жанр под номером ${i}`)
-        personalMovieDB.genres[i - 1] = genre;
-    }
-}
-
-writeYourGenres()
+//
+// let numberOfFilms;
+//
+//
+// function start() {
+//     numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', '');
+//     while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+//         numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', '');
+//     }
+// }
+//
+// start();
+//
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// };
+//
+//
+// function rememberMyFilms() {
+//     for (let i = 0; i < 2; i++) {
+//         const a = prompt('Один из последних просмотренных фильмов?', "");
+//         const b = prompt('На сколько оцените его?', "");
+//         if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+//             personalMovieDB.movies[a] = b;
+//         } else {
+//             i--;
+//         }
+//     }
+// }
+//
+// rememberMyFilms();
+//
+//
+// function detectedMyLevel() {
+//     if (personalMovieDB.count < 10) {
+//         console.log("Просмотрено слишком мало фильмов");
+//     } else if (personalMovieDB.count <= 10 && personalMovieDB.count < 30) {
+//         console.log("Вы любитель фильмов");
+//     } else if (personalMovieDB.count > 30) {
+//         console.log("КИНОМАН!!!")
+//     } else {
+//         console.log("ОШИБКА")
+//     }
+//
+// }
+//
+// detectedMyLevel();
+//
+// function showMyDB() {
+//     if (personalMovieDB.privat === false) {
+//         console.log(personalMovieDB)
+//     }
+// }
+//
+// showMyDB();
+//
+// function writeYourGenres() {
+//     for (let i = 1; i <= 3; i++) {
+//         const genre = prompt(`Ваш любимый жанр под номером ${i}`)
+//         personalMovieDB.genres[i - 1] = genre;
+//     }
+// }
+//
+// writeYourGenres()
 
 // function showFirstMessage(text) {
 //     console.log(text)
@@ -223,14 +223,59 @@ writeYourGenres()
 
 //================Callback==================
 
-function learnJS(lang, callback) {
-    console.log(`I learm: ${lang}`);
-    callback();
-}
+// function learnJS(lang, callback) {
+//     console.log(`I learm: ${lang}`);
+//     callback();
+// }
+//
+// function done() {
+//  console.log("A confirm all knowledge");
+// }
+//
+// learnJS("Javascript", done);
 
-function done() {
- console.log("A confirm all knowledge");
-}
+// function learnJS(lang, callback) {
+//     console.log(`I learn ${lang}`)
+//     callback()
+// }
+//
+// function done() {
+//     console.log('A big boss JS')
+// }
+//
+// learnJS('JavaScript', done)
 
-learnJS("Javascript", done);
 
+const options = {
+    name: "Test",
+    width: 1024,
+    height: 1024,
+    colors: {
+        border: "black",
+        bg: "red"
+    },
+    makeTest: function () {
+        console.log("test")
+    }
+};
+options.makeTest()
+
+console.log(Object.keys(options))
+
+//=================Массивы и псевдомассивы==============================
+
+const arr = [1, 2, 3, 6, 8];
+// arr.pop();
+// arr.push(10);
+// console.log(arr);
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i])
+// }
+
+// arr.forEach(function (item, i, arr) {
+//     console.log(`${i}: ${item} внутри массива ${arr}`)
+// })
+
+const str = prompt("", "")
+const products = str.split(",")
+console.log(products)
