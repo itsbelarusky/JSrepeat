@@ -310,5 +310,4 @@
 //  console.log(newArray)
 //
 // const video = []
-x = ''
-console.log(1 + 2 + [])
+
