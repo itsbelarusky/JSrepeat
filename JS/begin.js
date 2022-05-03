@@ -28,3 +28,4 @@ personalMovieDB.movies[lastFilm] = answer;
 personalMovieDB.movies[lastFilm2] = answer2;
 
 console.log(personalMovieDB)
+const newArr = [34, 434, 1]
