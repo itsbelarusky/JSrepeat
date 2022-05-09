@@ -104,8 +104,20 @@
 //         console.log(num)
 //     }
 // }
-const arrayOfNumbers = [];
-for (let i = 5; i <= 10; i++) {
-    arrayOfNumbers[i - 5] = i;
+// const arrayOfNumbers = [];
+// for (let i = 5; i <= 10; i++) {
+//     arrayOfNumbers[i - 5] = i;
+// }
+// console.log(arrayOfNumbers);
+
+let num = "";
+const yellow = 7
+
+for (let i = 1; i < yellow; i++) {
+
+    for (let j = 0; j < i; j++) {
+        num += "*";
+    }
+    num += "\n";
 }
-console.log(arrayOfNumbers);
+console.log(num);
