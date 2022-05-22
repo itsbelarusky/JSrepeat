@@ -11,7 +11,7 @@
 // const user = "lena";
 // console.log(`привет ${user}`)
 // const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?");
-//
+// //
 // const personalMovieDB = {
 //     count: numberOfFilms,
 //     movies: {},
@@ -20,12 +20,45 @@
 //     privat: false
 // }
 // const lastFilm = prompt("Один из последних просмотренных фильмов?", "");
-// const answer = prompt("на сколько оцените его?", "" );
+// const answer = prompt("на сколько оцените его?", "");
 // const lastFilm2 = prompt("Один из последних просмотренных фильмов?", "");
 // const answer2 = prompt("на сколько оцените его?", "");
+//========================С циклом While================================
+// num = 0;
+// while (num < 2) {
+//     const lastFilm = prompt("Один из последних просмотренных фильмов?", "");
+//     const answer = prompt("на сколько оцените его?", "");
+//     num++;
+//     if (lastFilm != null && answer != null && lastFilm != '' && answer != '' && lastFilm.length < 50) {
+//         personalMovieDB.movies[lastFilm] = answer;
+//     } else {
+//         console.log("error!");
+//         num--;
+//     }
+// }
+//========================С циклом While================================
+
+// for (let i = 0; i < 2; i++) {
+//     const lastFilm = prompt("Один из последних просмотренных фильмов?", "");
+//     const answer = prompt("на сколько оцените его?", "");
 //
-// personalMovieDB.movies[lastFilm] = answer;
-// personalMovieDB.movies[lastFilm2] = answer2;
+//     if (lastFilm != null && answer != null && lastFilm != '' && answer != '' && lastFilm.length < 50) {
+//         personalMovieDB.movies[lastFilm] = answer;
+//     } else {
+//         console.log("error!");
+//         i--;
+//     }
+// }
+// if (personalMovieDB.count <= 10) {
+//     console.log("вы посмотрели слишком мало!");
+// } else if (personalMovieDB.count < 30) {
+//     console.log("вы классический зритель!");
+// } else if (personalMovieDB.count > 30) {
+//     console.log("вы киноман!");
+// } else {
+//     console.log("произошла ошибка!");
+// }
+//
 //
 // console.log(personalMovieDB)
 // const newArr = [34, 434, 1]
@@ -110,14 +143,36 @@
 // }
 // console.log(arrayOfNumbers);
 
-let num = "";
-const yellow = 7
+// let num = "";
+// const yellow = 7
+//
+// for (let i = 1; i < yellow; i++) {
+//
+//     for (let j = 0; j < i; j++) {
+//         num += "*";
+//     }
+//     num += "\n";
+// }
+// console.log(num);
 
-for (let i = 1; i < yellow; i++) {
 
-    for (let j = 0; j < i; j++) {
-        num += "*";
-    }
-    num += "\n";
+//=======================================функции================================
+// function showFirstMessage(text) {
+//     console.log(text);
+// }
+//
+// showFirstMessage("Hello function arguments!");
+
+// const arrow = (a, b) => {
+//     return a + b;
+// }
+// console.log(arrow(4,5))
+const usdCurr = 28;
+const eurCurr = 32;
+
+function convert(amount, curr) {
+    console.log(curr * amount);
 }
-console.log(num);
+
+convert(500, usdCurr);
+convert(500, eurCurr);
